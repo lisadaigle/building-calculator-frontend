@@ -56,6 +56,9 @@ export function FormIndex() {
             name="permitAmount"
             value={permitAmount}
             onChange={(e) => setPermitAmount(e.target.value)}
+            required
+            step=".01"
+            min=".01"
           />
         </label>
         <p>
