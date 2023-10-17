@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function Results({ permitFee }) {
   return (
     <div id="feeResult">
@@ -8,3 +10,7 @@ export function Results({ permitFee }) {
     </div>
   );
 }
+Results.propTypes = {
+  permitFee: PropTypes.number,
+};
+// export default Results;
