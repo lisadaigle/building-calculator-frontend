@@ -11,6 +11,6 @@ export function Results({ permitFee }) {
   );
 }
 Results.propTypes = {
-  permitFee: PropTypes.number,
+  permitFee: PropTypes.string.isRequired,
 };
 // export default Results;

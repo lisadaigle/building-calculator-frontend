@@ -5,7 +5,7 @@ import { Results } from "./Results";
 export function FormIndex() {
   const [permitType, setPermitType] = useState("commercial");
   const [permitAmount, setPermitAmount] = useState(0);
-  const [permitFee, setPermitFee] = useState(0);
+  const [permitFee, setPermitFee] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,22 +30,23 @@ export function FormIndex() {
           <input
             type="radio"
             name="permitType"
-            value="commercial"
-            checked={permitType === "commercial"}
-            onChange={() => setPermitType("commercial")}
-          />
-          Commercial
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="permitType"
             value="residential"
             checked={permitType === "residential"}
             onChange={() => setPermitType("residential")}
           />
           Residential
         </label>
+        <label>
+          <input
+            type="radio"
+            name="permitType"
+            value="commercial"
+            checked={permitType === "commercial"}
+            onChange={() => setPermitType("commercial")}
+          />
+          Commercial
+        </label>
+
         <p></p>
         <label>
           Please enter the estimated value of this project:
