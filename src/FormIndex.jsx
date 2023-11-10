@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Results } from "./Results";
 
 export function FormIndex() {
-  const [permitType, setPermitType] = useState("commercial");
+  const [permitType, setPermitType] = useState("residential");
   const [permitAmount, setPermitAmount] = useState(0);
   const [permitFee, setPermitFee] = useState("");
 
@@ -25,7 +25,7 @@ export function FormIndex() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h3> Type of Permit </h3>
+        <h2> Type of Permit </h2>
         <label>
           <input
             type="radio"
