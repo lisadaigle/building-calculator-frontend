@@ -13,7 +13,8 @@ export function FormIndex() {
     const data = { permitType: permitType, fee: permitAmount };
 
     axios
-      .post("http://localhost:3000/calculator", data)
+      // .post("http://localhost:3000/calculator", data)
+      .post("https://backend-5677.onrender.com/", data)
       .then((response) => {
         setPermitFee(response.data.message);
       })
